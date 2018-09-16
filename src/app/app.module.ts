@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData } from './products/product-data';
 
+// Imports NgRx store
+import { StoreRootModule, StoreModule } from '@ngrx/store';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -22,6 +25,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
+    StoreModule.forRoot({}),
     UserModule,
     AppRoutingModule
   ],
